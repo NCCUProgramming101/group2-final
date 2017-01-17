@@ -5,7 +5,7 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
-int gameState = 0;
+int gameState = 5;
 
 final int start = 0;
 final int play1 = 1;
@@ -118,24 +118,21 @@ void draw() {
     image(info1,0,0,640,480);
     
     
-  if (mouseX>0 &&mouseX<20&& mouseY>0&& mouseY<20) {
       if (mousePressed) {
       gameState=info22;
-      }
+      mousePressed = false;
     }
     break;
    case info22:
    image(info2,0,0,640,480);
-   if (mouseX>20 &&mouseX<40&& mouseY>20&& mouseY<40) {
       if (mousePressed) {
       gameState=item1;
+      mousePressed = false;
       }
-  }
   break;
   
   case item1:
   image(item,0,0,640,480);
-  if (mouseX>40 &&mouseX<60&& mouseY>40&& mouseY<60) {
       if (mousePressed) {
       gameState=start;
       }
